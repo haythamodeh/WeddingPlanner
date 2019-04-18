@@ -1,0 +1,32 @@
+@model Wedding
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="CreateWedding" method="post">
+            <a class="btn btn-primary" href="/Dashboard">Dashboard</a>
+            <a class="btn btn-danger" href="/logout">Log Out</a>
+            <h1>Plan Your Wedding</h1>
+            <div class="form-group">
+                <span class="text-danger" asp-validation-for="WedderOne"></span>
+                <label for="">Wedder One</label>
+                <input type="text" asp-for="WedderOne" class="form-control">
+            </div>
+            <div class="form-group">
+                <span class="text-danger" asp-validation-for="WedderTwo"></span>
+                <label for="">Wedder Two</label>
+                <input type="text" asp-for="WedderTwo" class="form-control">
+            </div>
+            <div class="form-group">
+                <span class="text-danger" asp-validation-for="Date"></span>
+                <label for="">Date</label>
+                <input type="date" asp-for="Date" class="form-control">
+            </div>
+            <div class="form-group">
+                <span class="text-danger" asp-validation-for="Address"></span>
+                <label for="">Address</label>
+                <input asp-for="Address" class="form-control">
+            </div>
+            <button class="btn btn-success">Create Wedding</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+@model Wedding
+
+<div class="row">
+    <div class="col-md-6">
+        <a class="btn btn-primary" href="/Dashboard">Dashboard</a>
+        <a class="btn btn-danger" href="/logout">Log Out</a>
+        <h1 style="display:inline-block;">@Model.WedderOne and @Model.WedderTwo's Wedding</h1>
+        <hr>
+        <h4>Date @Model.Date.ToString("MMMM, dd, yyyy")</h4>
+        <h5>Guests:</h5>
+        @{
+            foreach(var g in @Model.AllGuests)
+            {
+                <li>@g.User.FirstName @g.User.LastName</li>
+            }
+        }
+    </div>
+</div>
